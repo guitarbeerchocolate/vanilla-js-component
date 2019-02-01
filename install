@@ -1,0 +1,7 @@
+#/bin/bash
+npm init -y
+npm i webpack webpack-cli webpack-dev-server --save-dev
+npm i css-loader extract-text-webpack-plugin@4.0.0-beta.0 node-sass sass-loader style-loader uglifyjs-webpack-plugin --save-dev
+npm i @babel/core @babel/preset-env babel-loader --save-dev
+npm i html-loader html-webpack-plugin file-loader clean-webpack-plugin --save-dev
+npm i mocha chai --save-dev
