@@ -3,6 +3,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const LiveReloadPlugin =require('webpack-livereload-plugin');
 
 module.exports = {
     entry: './src/js/app.js',
@@ -63,7 +64,8 @@ module.exports = {
       new HtmlWebpackPlugin({
         template: 'src/index.html'
       }),
-      new CleanWebpackPlugin(['dist'])
+      new CleanWebpackPlugin(['dist']),
+      new LiveReloadPlugin()
     ],
     optimization: {
       minimizer: [new UglifyJsPlugin()],
